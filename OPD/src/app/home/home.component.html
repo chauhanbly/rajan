@@ -1,0 +1,45 @@
+
+<div class = "topnav" >
+  <button (click)="openNav()"  class="btn "><i style = "font-size:25px;" class="material-icons">&#9776;</i> Menu</button>
+  <button style="float: right" class="btn"><i  class="material-icons">&#xe7fd;</i> User</button>
+ <button style="float: right" class="btn"><i class="material-icons">&#xe7fd;</i> Setting</button>
+
+ </div>
+ <img class ="logo" src="./assets/image2.png" id="bg" alt="">
+
+<div id="mySidenav" class="sidenav">
+    <ul id="myUL">
+        <h5>Module</h5> 
+        <hr>
+    <a href="home" class="closebtn " onclick="closeNav()">&#9776;</a>
+       
+    <a><span class="caret "><small>OPD </small></span>
+      <ul class="nested ">
+      <a href="OPD"  class = "tabhover">  <small>Registration </small></a>
+      <a href="header" ><small>Refund </small></a>
+    </ul></a>
+
+    <a><span class="caret "><small>SERVICE </small></span>
+      <ul class="nested ">
+        <a href="OPD"  class = "tabhover">  <small>Registration </small></a>
+        <a href="header" ><small>Refund </small></a>
+      </ul></a>
+
+   <a><span class="caret "><small>IPD </small></span>
+    <ul class="nested ">
+      <a href="OPD"  class = "tabhover">  <small>Registration </small></a>
+      <a href="header" ><small>Refund </small></a>
+    </ul></a>
+
+    <a><span class="caret "><small>MIS </small></span>
+      <ul class="nested ">
+        <a href="OPD"  class = "tabhover">  <small>Registration </small></a>
+        <a href="header" ><small>Refund </small></a>
+      </ul></a>
+
+       
+      </ul>
+  </div>
+
+  <app-footer></app-footer>
+    

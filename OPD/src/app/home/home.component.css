@@ -1,0 +1,130 @@
+
+/* Add a black background color to the top navigation */
+.topnav {
+   background-color: #3B5998;
+  overflow: hidden;
+  padding-left: 150px;
+  padding-right: 100px;
+  padding-bottom: 20px;
+  /* margin-left: 100px; */
+}
+ 
+.btn {
+  border-radius: 4px;
+  background-color: #3B5998;
+  border: none;
+  color:white;
+  text-align: center;
+  font-size: 20px;
+  padding-left: 10px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.btn1 {
+  border-radius: 4px;
+  background-color: #3B5998;
+  border: none;
+  color:white;
+  text-align: center;
+  font-size: 20px;
+  padding-left: 10px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.tabhover {
+ color:white;
+ float: left;
+}
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color:white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+  
+  /* margin-left: 100px; */
+  
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 7px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 26px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* dor tree */
+.caret {
+  cursor: pointer; 
+  user-select: none; /* Prevent text selection */
+  color:black;
+  font-size: 20px;
+   position: relative;
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "\f0a4";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+/*--adjust as necessary--*/
+  color: #000;
+  font-size: 18px;
+  padding-right: 0.5em;
+ 
+  top: 10px;
+  left: 0;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(90deg); 
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+  color:white;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}
+#bg {
+  position: fixed; 
+  top: 40; 
+  left: 0; 
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}

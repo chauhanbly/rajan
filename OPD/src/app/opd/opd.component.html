@@ -1,0 +1,70 @@
+
+  <div 
+  class = "topnav" >
+      <button (click)="login(home)" style="float:right" class="btn"><i style = "font-size:25px;" class="material-icons" >&#xe88a;</i> Home</button>
+      <button id="myBtn" style="float:right" class="btn"><i style = "font-size:25px;" class="material-icons" >fiber_new</i> New</button>
+    
+  </div>
+  <div style="margin-left:20px; margin-top:10px;">
+    <input  type="text1" id="myInput" (click)="myFunction(myInput)" placeholder = "SearchbyName...">
+</div>
+
+
+    <table id="myTable" >
+     <tr class="header">
+         <th style="width:40%;">Emp Code</th>
+         <th style="width:40%;">First Name</th>
+         <th style="width:40%;">Last Name</th>
+         <th style="width:40%;">Mobile</th>
+       </tr>
+ <tr *ngFor = "let emp of Service.list " >
+   <td (click)="populateForm(emp)" >{{emp.Empcode}}</td>
+   <td  (click)="populateForm(emp)">{{emp.FullName}}</td>
+   <td (click)="populateForm(emp)">{{emp.Position}}</td>
+   <td  (click)="populateForm(emp)">{{emp.Mobile}}</td>
+ 
+ 
+ <td> <button (click)="OnDelete(emp.EmployeeId)"><i class="fa fa-trash-o" style="color:red"></i></button></td> 
+ <td><button  (click)="populateForm(emp)" class="fa fa-pencil"></button></td>
+ </tr>
+ </table>  
+    
+   <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+      
+    <a class = "close" id="btn1">&times; 
+   
+        <h6>OPD REGISTRATION FORMS  </h6>
+      </a>
+       
+<!--work in box -->
+<div> 
+<form #form="ngForm"  (ngSubmit)="submit(form)" >
+    
+
+    <div class = "form-group">
+
+    <input name="EmpCode" #EmpCode="ngModel" type="text" required ngModel placeholder="EmpCode" class="margininput" >
+    <input name="FullName"  #FullName="ngModel" type="text" required ngModel placeholder="First Name" class="margininput"  >
+    <input name="Position" type="text" required ngModel placeholder="LastName" class="margininput" >
+    <input name="Mobile"  type="text" required ngModel #Mobile="ngModel"  
+         pattern="[1-9]{1}[0-9]{9}" placeholder="Mobile" class="margininput">
+   
+               
+ 
+ 
+  </div >
+  
+
+<div  >
+  <button type="submit" class="btn btn-sm btn-primery" id="submit" [disabled]="!form.valid"> SAVE </button>
+</div>
+
+</form>
+</div>
+</div>
+<!-- end of Box -->
+<app-footer></app-footer>

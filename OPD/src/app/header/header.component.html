@@ -1,0 +1,42 @@
+
+<button class="tablink"  (click)="openPage('Home', this, 'red')">Home</button>
+<button class="tablink"  (click)="openPage('News', this, 'green')" >News</button>
+<button class="tablink"  (click)="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink"  (click)="openPage('About', this, 'orange')">About</button>
+
+
+<div id="Home" class="tabcontent">
+    <table id="myTable" >
+        <tr class="header">
+            <th style="width:40%;">Emp Code</th>
+            <th style="width:40%;">First Name</th>
+            <th style="width:40%;">Last Name</th>
+            <th style="width:40%;">Mobile</th>
+          </tr>
+    <tr *ngFor = "let emp of Service.list " >
+      <td  >{{emp.Empcode}}</td>
+      <td  >{{emp.FullName}}</td>
+      <td >{{emp.Position}}</td>
+      <td  >{{emp.Mobile}}</td>
+    
+    
+    <td> <button (click)="OnDelete(emp.EmployeeId)" class = 'btn btn-sm btn-outline-danger'>Delete</button></td> 
+    <td><button class="btn btn-sm btn-info" (click)="populateForm(emp)">Edit</button></td>
+    </tr>
+    </table>  
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
